@@ -87,3 +87,11 @@ void ANBPlayerController::SetNotificationText(const FText& InNotificationText)
 {
 	NotificationText = InNotificationText;
 }
+
+void ANBPlayerController::ClientRPCClearChatLog_Implementation()
+{
+	if (IsValid(ChatInputWidgetInstance) == true)
+	{
+		ChatInputWidgetInstance->ClearChatLog();
+	}
+}

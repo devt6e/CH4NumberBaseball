@@ -262,6 +262,8 @@ void ANBGameModeBase::ResetGame()
 			continue;
 		}
 
+		NBPlayerController->ClientRPCClearChatLog();
+
 		ANBPlayerState* NBPlayerState = NBPlayerController->GetPlayerState<ANBPlayerState>();
 		if (IsValid(NBPlayerState) == true)
 		{
@@ -272,6 +274,7 @@ void ANBGameModeBase::ResetGame()
 	bIsRoundOver = false;
 
 	SetNotificationTextToAll(TEXT("New game started!"));
+	BroadcastChatMessage(TEXT("[System] New game started!"));
 }
 
 void ANBGameModeBase::SetNotificationTextToAll(const FString& InMessageString)

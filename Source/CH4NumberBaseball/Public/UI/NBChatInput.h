@@ -19,6 +19,8 @@ public:
 
 	void AddChatMessage(const FString& InMessageString);
 
+	void ClearChatLog();
+
 protected:
 	UFUNCTION()
 	void OnChatInputTextCommitted(const FText& Text, ETextCommit::Type CommitMethod);

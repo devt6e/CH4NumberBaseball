@@ -67,3 +67,8 @@ void UNBChatInput::OnChatInputTextCommitted(const FText& Text, ETextCommit::Type
 		EditableTextBox_ChatInput->SetKeyboardFocus();
 	}
 }
+
+void UNBChatInput::ClearChatLog()
+{
+	ScrollBox_ChatLog->ClearChildren();
+}

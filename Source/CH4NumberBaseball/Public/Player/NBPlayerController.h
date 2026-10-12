@@ -29,6 +29,9 @@ public:
 
 	void SetNotificationText(const FText& InNotificationText);
 
+	UFUNCTION(Client, Reliable)
+	void ClientRPCClearChatLog();
+
 protected:
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UUserWidget> NotificationTextWidgetClass;
